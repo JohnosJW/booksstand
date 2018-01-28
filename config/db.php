@@ -2,7 +2,7 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=eworldtours',
+    'dsn' => 'mysql:host=localhost;dbname=bookstand',
     'username' => 'root',
     'password' => '',
     'charset' => 'utf8',

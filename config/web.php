@@ -17,10 +17,20 @@ $config = [
             'enableUnconfirmedLogin' => true,
             'confirmWithin' => 21600,
             'cost' => 12,
-            'admins' => ['admin']
+            'admins' => ['admin'],
+            'modelMap' => [
+                'RegistrationForm' => 'app\models\RegistrationForm',
+            ],
+        ],
+        'books' => [
+            'class' => 'app\modules\books\Module',
         ],
     ],
     'components' => [
+        'authManager' => [
+            'class' => 'yii\rbac\PhpManager',
+            'defaultRoles' => ['guest']
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '5rIzmlmeAaoEZviPNZ51C9e7dKNVUHOm',
